@@ -35,7 +35,7 @@ Page({
           winWidth: res.windowWidth,
           winHeight: res.windowHeight,
           clientHeight: res.windowHeight - 50,
-          userId:options.userId
+          username:options.username
         });
       }
     });
@@ -87,7 +87,6 @@ Page({
         }
       }
     }
-    
     that.selectLists()
     that.setData({
       userList: userList,
@@ -221,6 +220,18 @@ Page({
       header: {
         'Authorization': Authorization
       },
+      success: function(res) {
+        var userList = that.data.userList;
+        for(var i = 0; i < userList.length; i++) {
+          for(var j = 0; j < userList[i].children.length; j++) {
+            userList[i].children[j].checked = false;
+          }
+        }
+        that.setData({
+          userList: userList,
+          message: ''
+        })
+      }
     })
   },
   onShow: function () {

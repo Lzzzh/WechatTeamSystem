@@ -46,7 +46,7 @@
         <view class="container">
   <view class="oversf orderBuy">
     <view class="row" style="background-color: #fff">
-      <textarea type="text" name="message" bindinput="bindKeyInput" placeholder="请输入内容" />
+      <textarea type="text" value="{{message}}" bindinput="bindKeyInput" placeholder="请输入内容" />
     </view>
     <scroll-view scroll-y="true" style="height: 12%">
   <view class="storeLists">
