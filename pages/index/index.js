@@ -2,6 +2,7 @@
 //获取应用实例
 
   var util = require('../../utils/util.js');
+  var CryptoJS = require('../../utils/secret.js')
   var app = getApp();
 
   Page({
@@ -41,7 +42,7 @@
       // 判断账号是否为空和判断该账号名是否被注册  
       wx.request({
         url: "http://localhost:8091/api/login",
-        data:{'userId':userId, 'userPassword':userPassword},
+        data:{'userId':userId, 'userPassword': CryptoJS.Encrypt(userPassword)},
         method: "POST",
         header: {
           'content-type': 'application/json'
