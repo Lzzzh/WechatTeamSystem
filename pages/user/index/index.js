@@ -146,7 +146,7 @@ Page({
     var userId = wx.getStorageSync('userId')
     var Authorization = wx.getStorageSync('Authorization')
     wx.request({
-      url: 'http://localhost:8091/api/getUserList',
+      url: 'http://49.234.223.73/api/getUserList',
       method: 'GET',
       header: {
         'Authorization': Authorization
@@ -175,9 +175,9 @@ Page({
     var url = ''
     var authority = wx.getStorageSync('authority')
     if (authority == "0") {
-        url = "http://localhost:8091/api/wechatStudentProjectList"
+        url = "http://49.234.223.73/api/wechatStudentProjectList"
     }else if (authority == "1") {
-      url = "http://localhost:8091/api/wechatTeacherProjectList"
+      url = "http://49.234.223.73/api/wechatTeacherProjectList"
     }
     wx.request({
       url: url,
@@ -210,7 +210,7 @@ Page({
     var userId = wx.getStorageSync('userId')
     var Authorization = wx.getStorageSync('Authorization')
     wx.request({
-      url: 'http://localhost:8092/wechat-service/sendMessage',
+      url: 'http://49.234.223.73/wechat-service/sendMessage',
       data: {
         "senderId": userId,
         "content": that.data.message,

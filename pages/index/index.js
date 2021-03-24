@@ -41,7 +41,7 @@
       var userPassword = e.detail.value.userPassword;
       // 判断账号是否为空和判断该账号名是否被注册  
       wx.request({
-        url: "http://localhost:8091/api/login",
+        url: "http://49.234.223.73/api/login",
         data:{'userId':userId, 'userPassword': CryptoJS.Encrypt(userPassword)},
         method: "POST",
         header: {

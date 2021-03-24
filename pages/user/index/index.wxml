@@ -7,7 +7,7 @@
 <swiper current="{{currentTab}}" class="swiper-box" duration="300"  bindchange="bindChange">  
     <!-- 我的项目 -->  
     <swiper-item>  
-    <scroll-view scroll-y="true"> 
+    <scroll-view scroll-y="true" style="height: 100%"> 
       <view class="table main-container">
   <view class="tr bg-w topBlock">
     <view class="th">项目ID</view>
@@ -17,7 +17,7 @@
     <view class="th ">立项时间</view>
   </view>
   <view class="bottomBlock">
-  <scroll-view  scroll-y="true" bindscrolltolower="searchScrollLower"> 
+  <scroll-view  scroll-y="true"  bindscrolltolower="searchScrollLower"> 
   <block wx:for="{{projectList}}" wx:key="{{projectId}}">
     <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
       <view class="td">{{item.projectId}}</view>

@@ -20,7 +20,7 @@
     "compileHotReLoad": false,
     "useMultiFrameRuntime": true,
     "useApiHook": true,
-    "useApiHostProcess": false,
+    "useApiHostProcess": true,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
@@ -38,7 +38,7 @@
   },
   "compileType": "miniprogram",
   "libVersion": "2.15.0",
-  "appid": "touristappid",
+  "appid": "wx02f0e9f1680d50aa",
   "projectname": "WechatTeamSystem",
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
